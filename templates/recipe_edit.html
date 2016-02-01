@@ -1,0 +1,57 @@
+<form class="form-horizontal">
+  <input type="hidden" name="recipe_id" value="{{recipe_id}}"/>
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Form Name</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="recipe_name">Recipe Name</label>
+      <div class="col-md-5">
+        <input id="recipe_name" name="recipe_name" type="text" placeholder="Recipe Name" class="form-control input-md" required="" value="{{recipe_name}}">
+      </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textarea">Description</label>
+      <div class="col-md-4">
+        <textarea class="form-control" id="textarea" name="recipe_desc">{{{recipe_desc}}}</textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <table class="table table-striped table-hover " style="margin-left:215px;width:550px;">
+    <thead><tr><th>Amount</th><th>Measurement</th><th>Name</th></tr></thead>
+    <tbody>
+      {{#each ingredients}}
+        <tr>
+          <td>{{amount}}</td>
+          <td>{{measure_name}}</td>
+          <td>{{ingredient_name}}</td>
+        </tr>
+      {{/each}}
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align:right;"><a href="#" class="btn btn-primary btn-round add-ingredient">+</a></td>
+        </tr>  
+      </tfoot>
+    </tbody>
+  </table>
+      
+    </div>
+    
+    <!-- Button (Double) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="button1id"></label>
+      <div class="col-md-8">
+        <button id="button1id" name="button1id" class="btn btn-success save">Save</button>
+        <button id="button2id" name="button2id" class="btn btn-danger cancel">Cancel</button>
+      </div>
+    </div>
+
+  </fieldset>
+  
+  
+</form>

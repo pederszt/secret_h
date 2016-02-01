@@ -1,0 +1,10 @@
+{{#if this }}
+<h2>{{{recipe_name}}}</h2>
+<p>{{{recipe_desc}}}</p>
+<ul>
+  {{#each ingredients}}
+    <li>{{amount}}{{#if measure_name}} {{ingredient_measure this}}{{/if}} {{ingredient_name}}</li>
+  {{/each}}
+</ul>
+<button id="button1id" name="button1id" class="btn btn-success recipe-edit">Edit</button>
+{{/if}}

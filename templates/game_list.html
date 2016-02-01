@@ -1,0 +1,13 @@
+<div class="bs-component" >
+  <ul class="nav nav-pills nav-stacked">
+    {{#each this }}
+    <li class='game-item {{game_status}}'><a href="#" data-game-id='{{game_id}}' data-game-type='{{game_type}}'>{{{game_name}}}  <span class="date-created">{{{date_created}}}</span></a></li>
+    {{/each}}
+  </ul>
+  <div class="create-game-wrapper">
+    <input type="text" id="game_name" />
+    <button class="btn btn-success create-game">
+      Create Game
+    </button>
+  </div>
+</div>

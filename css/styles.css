@@ -1,0 +1,27 @@
+@import url("bootstrap-darkly.min.css");
+
+div.main-view{
+  float:left;
+  width:20%;
+  padding-right:20px;
+}
+
+div.recipe-view{
+  float:left;
+  width:60%;
+  background-color:#303030;
+}
+
+div.recipe-edit-view{
+  float:left;
+  width:60%;
+}
+
+li.add-recipe-item a{
+  font-style: italic;
+}
+
+a.btn-round{
+  border-radius: 35px;
+  padding: 4px 10px;
+}

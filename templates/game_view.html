@@ -1,0 +1,40 @@
+<div>
+  <h2>
+    {{game.game_name}} 
+  </h2>
+  {{#if pending}}
+    <ul>
+      {{#each joined}}
+      <li>{{user_name}}</li>
+      {{/each}}
+      <li>{{h_count}}/1 Hitler</li>
+      <li>{{f_count}}/2 Fascists</li>
+    </ul>
+    {{#if owner }}
+    <button class="btn btn-success start-game">Start</button>
+    {{else}}
+      {{#if hasJoined}}{{else}}
+        <button  class="btn btn-success join-game">Join</button>
+      {{/if}}
+    {{/if}}
+    
+  </ul>
+  {{/if}}
+  {{#if started}}
+    <ul>
+      {{#each joined}}
+      <li>{{user_name}}</li>
+      {{/each}}
+      <li>{{h_count}}/1 Hitler</li>
+      <li>{{f_count}}/2 Fascists</li>
+    </ul>
+    <ul>
+      <li><button class="btn btn-success select-role" data-role="h">Hitler</button></li>  
+      <li><button class="btn btn-success select-role" data-role="f">Fascist</button></li>  
+      <li><button class="btn btn-success select-role" data-role="l">Liberal</button></li>  
+    </ul>
+    {{#if owner }}
+      <button class="btn btn-success reveal-roles">Reveal</button>
+    {{/if}}
+  {{/if}}
+</div>
